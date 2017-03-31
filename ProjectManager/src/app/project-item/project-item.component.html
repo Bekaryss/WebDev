@@ -1,0 +1,15 @@
+ <div class="project-item">  
+    <span class="title">{{ project.Title }}</span>
+    <p class="description">{{ project.Description }}</p>
+    <h4>Tasks</h4>
+    <div class="task-item" *ngFor="let task of project.ProjectTasks">
+        <h5>{{ task.Title }}</h5>
+        <p>{{ task.Description }} </p>
+    </div>
+
+    <div class="actions">
+        <button class="delete" (click)="onDelete()">
+            Delete
+        </button>
+    </div>
+</div>
